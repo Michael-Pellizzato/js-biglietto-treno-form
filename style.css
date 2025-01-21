@@ -1,0 +1,31 @@
+body{
+    background-color: blue;
+    font-family: sans-serif;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+
+}
+
+.titolo{
+    color: white;
+}
+
+.primoRiquadro{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 10px;
+}
+
+.item{
+    flex: 0 0 calc(33.33% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
