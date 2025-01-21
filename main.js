@@ -15,3 +15,21 @@ MILESTONE 3:
 Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.*/
 
 
+// variabili
+const prezzobigliettokm = 0.21
+let km = parseInt (  ( "quanti km devi percorrere") )
+let età = parseInt (  ( "quanti anni hai") )
+let scontominorenni = 0.80
+let scontoover65 = 0.60
+let prezzobiglietto;
+
+// calcoli
+
+if ( età < 18 ) {
+    prezzobiglietto = ( prezzobigliettokm * km ) * scontominorenni
+    console.log ( `il prezzo del tuo biglietto è: ${prezzobiglietto}`)
+} else if ( età > 65 ) {
+    prezzobiglietto = ( prezzobigliettokm * km ) * scontoover65
+} else {
+    prezzobiglietto = ( prezzobigliettokm * km )
+}
