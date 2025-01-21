@@ -23,40 +23,40 @@
                 Km da percorrere
               </div>
               <div class="col">
-                Fascia di eta
+                Età
               </div>
             </div>
           </div>
           <div class="container text-center">
             <div class="row">
               <div class="col">
-                <span id="nome-cognome">Inserisci</span>
+                <input type="text" id="name" value="" placeholder="inserisci nome e cognome">
               </div>
               <div class="col">
-                <span id="km">Inserisci</span>
+                <input type="text" id="chilometri" value="" placeholder="inserisci i km">
               </div>
               <div class="col">
-                <span id="eta">Inserisci</span>
+                <input type="text" id="eta" value="" placeholder="inserisci la tua età">
               </div>
             </div>
           </div>
           <div class="container text-center">
             <div class="row">
               <div class="col">
-                <button type="button" class="btn btn-success">Genera</button>
+                <button type="button" id="genera" class="btn btn-success">Genera</button>
               </div>
               <div class="col">
-                <button type="button" class="btn btn-danger">Annulla</button>
+                <button type="button" id="annulla" class="btn btn-danger">Annulla</button>
               </div>
             </div>
           </div>
     </div>
 
-    <div class="div-flex d-none">
+    <div class="div-flex">
         <h1>IL TUO BIGLIETTO</h1>
     </div>
 
-    <div class="text-bg-light p-3 d-none">
+    <div id="dnone" class="text-bg-light p-3 d-none">
         <p>DETTAGLI PASSEGGERO</p>
         <table class="table">
             <thead>
@@ -70,11 +70,11 @@
             </thead>
             <tbody>
               <tr>
-                <th>michael pellizzato</th>
+                <th id="nomeCompilato"></th>
                 <td>biglietto standard</td>
-                <td>21</td>
-                <td>47658</td>
-                <td>3.10</td>
+                <td id="vagone"></td>
+                <td id="CP"></td>
+                <td id="prezzoFinale">3.10</td>
               </tr>
             </tbody>
         </table>

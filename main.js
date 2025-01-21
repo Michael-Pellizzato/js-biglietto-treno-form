@@ -17,13 +17,63 @@ Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo sti
 
 // variabili
 const prezzobigliettokm = 0.21
-let km = parseInt (  ( "quanti km devi percorrere") )
-let età = parseInt (  ( "quanti anni hai") )
 let scontominorenni = 0.80
 let scontoover65 = 0.60
 let prezzobiglietto;
 
-// calcoli
+let nome = document.getElementById('name')
+let kilometri = document.getElementById('chilometri')
+let anni = document.getElementById('eta')
+const bottone = document.getElementById("genera")
+
+
+function name(){
+    document.getElementById("name").value
+}
+
+function chilometri(){
+    document.getElementById("chilometri").value
+}
+
+function eta(){
+    document.getElementById("eta").value
+}
+
+bottone.addEventListener("click", function() {
+
+    dnone.classList.remove("d-none")
+
+    let nomePasseggero = nome.value
+    nomeCompilato.innerHTML = nomePasseggero 
+
+    let carrozza = (Math.floor(Math.random()*10 ) +1)
+    vagone.innerHTML = carrozza
+
+    let codice = (Math.floor(Math.random()*100000 ))
+    CP.innerHTML = codice
+
+    
+    let km = kilometri.value
+    let eta = anni.value
+
+    if ( eta < 18 ) {
+        prezzobiglietto = ( prezzobigliettokm * km ) * scontominorenni
+        prezzoFinale.innerHTML = `${prezzobiglietto.toFixed(2)} €`
+    } else if ( eta > 65 ) {
+        prezzobiglietto = ( prezzobigliettokm * km ) * scontoover65
+        prezzoFinale.innerHTML = `${prezzobiglietto.toFixed(2)} €`
+    } else {
+        prezzobiglietto = ( prezzobigliettokm * km )
+        prezzoFinale.innerHTML = `${prezzobiglietto.toFixed(2)} €`
+    }
+})    
+
+
+
+
+
+
+/* calcoli
 
 if ( età < 18 ) {
     prezzobiglietto = ( prezzobigliettokm * km ) * scontominorenni
@@ -32,4 +82,8 @@ if ( età < 18 ) {
     prezzobiglietto = ( prezzobigliettokm * km ) * scontoover65
 } else {
     prezzobiglietto = ( prezzobigliettokm * km )
-}
+}*/
+
+
+
+
